@@ -1,0 +1,48 @@
+
+References:
+    http://www.openfoundry.org/tw/tech-column/8516-pythons-virtual-environment-and-multi-version-programming-tools-virtualenv-and-pythonbrew
+
+# 有2種方法，2選1即可，建議用virtualenvwrapper
+
+
+# ---------------------------------------- 01 --------------------------------------------
+#### In general, this software has been installed on the clustering machines.
+sudo pip install virtualenv
+
+# move to where you want to install your virtual environment
+cd ~
+
+# Setting your virtual machine name, this instruction will create a directory named YOUR_VIRTUAL_MACHINE_NAME
+virtualenv  YOUR_VIRTUAL_MACHINE_NAME
+
+cd   YOUR_VIRTUAL_MACHINE_NAME
+
+# Activate virtual environment
+source bin/activate
+
+
+# Inactivate virtual environment
+deactivate
+
+
+
+# ---------------------------------------- 02 --------------------------------------------
+### Install
+sudo pip install virtualenvwrapper
+
+# You can added this line in the bottom of your .bashrc 
+source virtualenvwrapper.sh 
+
+mkvirtualenv  YOUR_VIRTUAL_MACHINE_NAME
+
+# Activate virtual environment
+workon  YOUR_VIRTUAL_MACHINE_NAME
+
+
+# Inactivate virtual environment
+deactivate
+
+
+
+
+##### 即可開始用pip安裝虛擬環境需要的套件！！！！
